@@ -1,0 +1,1 @@
+- Make each character have a race, species, etc

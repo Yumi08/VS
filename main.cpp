@@ -1,21 +1,15 @@
 #include "Character.hpp"
 #include <iostream>
+#include "Config.hpp"
 
-#define PRINT(x) std::cout << x << std::endl
+void setup(){
+   Config::write = [](std::string output){
+      std::cout << output << std::endl;
+   };
+}
 
 int main(){
-   Character yumi("Yumi");
-   
-   PRINT(yumi.get_hp());
-   PRINT(yumi.is_alive);
+   setup();
 
-   yumi.set_hp(0);
-
-   PRINT(yumi.get_hp());
-   PRINT(yumi.is_alive);
-
-   yumi.set_hp(50);
-
-   PRINT(yumi.get_hp());
-   PRINT(yumi.is_alive);
+   Config::write("test");
 }

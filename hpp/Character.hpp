@@ -1,9 +1,9 @@
 #pragma once
 #include <string>
 
-class Person{
+class Character{
    public:
-   Person(std::string name);
+   Character(std::string name);
 
    std::string name;
 };

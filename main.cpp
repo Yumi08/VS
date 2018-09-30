@@ -1,5 +1,5 @@
-#include "Person.hpp"
+#include "Character.hpp"
 
 int main(){
-   Person yumi("Yumi");
+   Character yumi("Yumi");
 }

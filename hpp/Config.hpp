@@ -1,6 +1,4 @@
 #pragma once
-#include <string>
+#include <iostream>
 
-struct Config{
-   inline static void (*write)(std::string output) = 0;
-};
+#define VSCONFIG_PRINT(x) std::cout << x << std::endl

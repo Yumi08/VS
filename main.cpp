@@ -1,15 +1,19 @@
 #include "Character.hpp"
 #include <iostream>
 #include "Config.hpp"
+#include <random>
 
 void setup(){
-   Config::write = [](std::string output){
-      std::cout << output << std::endl;
-   };
+   srand(time(0));
 }
 
 int main(){
    setup();
 
-   Config::write("test");
+   Character yumi("Yumi");
+   Character potato("Potato");
+
+   yumi.attack(potato);
+
+   VSCONFIG_PRINT(potato.get_hp());
 }

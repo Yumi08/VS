@@ -10,9 +10,13 @@ Character::Character(std::string name)
 }
 
 void Character::attack(Character& opponent){
-   int damage = strength + (rand() % 50 - 25);
+   int damage = get_damage();
    VSCONFIG_PRINT(name+" deals "+std::to_string(damage)+" damage to "+opponent.name+"!");
    opponent.set_hp(opponent.get_hp() - damage);
+}
+
+int Character::get_damage(){
+   return (strength + (rand() % 50 - 25));
 }
 
 void Character::set_hp(int hp){

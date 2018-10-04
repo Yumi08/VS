@@ -7,6 +7,9 @@ class Character{
 
    std::string name;
    bool is_alive;
+   int strength;
+
+   void attack(Character& opponent);
 
    // props
    int get_hp() {return hp;}

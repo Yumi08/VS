@@ -11,11 +11,13 @@ class Character{
 
    void attack(Character& opponent);
 
+   int get_damage();
+
    // props
    int get_hp() {return hp;}
    void set_hp(int hp);
-   private:
 
+   private:
    // props
    int hp;
 };

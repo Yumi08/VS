@@ -11,10 +11,10 @@ int main(){
    setup();
 
    Character yumi("Yumi");
-   Character potato("Potato");
+   Character bob("Bob");
 
-   yumi.attack(potato);
-   yumi.attack(potato);
+   yumi.attack(bob);
+   yumi.attack(bob);
 
-   VSCONFIG_PRINT(potato.get_hp());
+   VSCONFIG_PRINT(bob.get_hp());
 }

@@ -14,6 +14,7 @@ int main(){
    Character potato("Potato");
 
    yumi.attack(potato);
+   yumi.attack(potato);
 
    VSCONFIG_PRINT(potato.get_hp());
 }

@@ -13,12 +13,17 @@ class Character{
    int base_defense;
 
    void attack(Character& opponent);
-   int get_damage();
+
+   // Amount of damage to take.
+   int calculate_taken_damage(int dmg);
    void take_damage(int dmg);
 
    // props
    int get_hp() {return prop_hp;}
    void set_hp(int hp);
+
+   // Amount of damage to do.
+   int get_damage_dealable(){return (strength + (rand() % 50 - 25));};
 
    private:
    // props

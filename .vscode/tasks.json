@@ -6,7 +6,7 @@
       {
          "label": "build",
          "type": "shell",
-         "command": "g++ -I./hpp *.cpp ./cpp/*.cpp",
+         "command": "g++ -I./hpp *.cpp ./cpp/*.cpp -DDEBUG",
          "group": {
             "kind": "build",
             "isDefault": true

@@ -11,17 +11,23 @@ Character::Character(std::string name)
 }
 
 void Character::attack(Character& opponent){
-   int damage = get_damage();
-   VSCONFIG_PRINT(name+" deals "+std::to_string(damage)+" damage to "+opponent.name+"!");
+   int damage = get_damage_dealable();
+   VSCONFIG_PRINT(name+" deals "+std::to_string(calculate_taken_damage(damage))+" damage to "+opponent.name+"!");
    opponent.take_damage(damage);
 }
 
-int Character::get_damage(){
-   return (strength + (rand() % 50 - 25));
+int Character::calculate_taken_damage(int dmg){
+   return dmg*(100/(100+(float)base_defense));
 }
 
 void Character::take_damage(int dmg){
-   set_hp(get_hp() - (dmg*(100/(100+(float)base_defense))));
+   int damage = calculate_taken_damage(dmg);
+   set_hp(get_hp() - damage);
+
+   #if HEAVYDEBUG
+      VSCONFIG_PRINT("dmg: "+std::to_string(dmg));
+      VSCONFIG_PRINT("taken: "+std::to_string(damage));
+   #endif
 }
 
 void Character::set_hp(int hp){

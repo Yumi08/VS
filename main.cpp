@@ -13,7 +13,7 @@ int main(){
    Character yumi("Yumi");
    Character bob("Bob");
 
-   bob.take_damage(10);
+   yumi.attack(bob);
 
    VSCONFIG_PRINT(bob.get_hp());
 }

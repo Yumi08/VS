@@ -18,7 +18,7 @@ class Character{
    int calculate_taken_damage(int dmg);
    void take_damage(int dmg);
 
-   // props
+   // Props
    int get_hp() {return prop_hp;}
    void set_hp(int hp);
 
@@ -26,6 +26,6 @@ class Character{
    int get_damage_dealable(){return (strength + (rand() % 50 - 25));};
 
    private:
-   // props
+   // Props
    int prop_hp;
 };
